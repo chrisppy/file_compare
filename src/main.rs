@@ -8,10 +8,10 @@ extern crate clap;
 use clap::{Arg, App};
 
 fn main() {
-    let matches = App::new("file_compare")
-    .version("0.1.0")
-    .author("Chris Palmer <pennstate5013@gmail.com>")
-    .about("compare two files to see if lines in first file exist in the second file")
+    let matches = App::new(util::get_name())
+    .version(util::get_version())
+    .author(util::get_author())
+    .about(util::get_about())
     .arg(Arg::with_name("INPUT")
         .help("Sets the input file to use to check")
         .required(true)

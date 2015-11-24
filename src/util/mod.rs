@@ -18,3 +18,19 @@ pub fn read_to_vec(path_str: &str) -> Vec<String> {
 
     file_vec
 }
+
+pub fn get_version() -> &'static str {
+    "1.0.0"
+}
+
+pub fn get_name() -> &'static str {
+    "file_compare"
+}
+
+pub fn get_author() -> &'static str {
+    "Chris Palmer <pennstate5013@gmail.com>"
+}
+
+pub fn get_about() -> &'static str {
+    "compare two files to see if lines in first file exist in the second file"
+}

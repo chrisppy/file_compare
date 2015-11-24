@@ -1,6 +1,6 @@
 [package]
 name = "file_compare"
-version = "0.1.0"
+version = "1.0.0"
 authors = ["Chris Palmer <pennstate5013@gmail.com>"]
 license = "GPL-3.0"
 description = "compare two files to see if lines in first file exist in the second file"
