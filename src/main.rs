@@ -39,9 +39,9 @@ fn main() {
         .long("find")
         .help("string to look for to narrow search")
         .takes_value(true))
-    .arg(Arg::with_name("SPLIT_B")
+    .arg(Arg::with_name("SPLIT")
         .short("b")
-        .long("split_before")
+        .long("split")
         .help("get string before the passed character or string")
         .takes_value(true))
     .arg(Arg::with_name("debug")
@@ -53,7 +53,7 @@ fn main() {
     let input = matches.value_of("INPUT");
     let compare = matches.value_of("COMPARE");
     let find =   matches.value_of("FIND").unwrap_or("");
-    let split_b = matches.value_of("SPLIT_B");
+    let split = matches.value_of("SPLIT");
 
     let input_vec = read_to_vec(input.unwrap());
     let compare_vec = read_to_vec(compare.unwrap());
@@ -61,7 +61,6 @@ fn main() {
     for input_line in input_vec.clone() {
         let line = input_line + " ";
         let input_str: &str = &line;
-
         if matches.is_present("debug"){
             print!("{} : ",input_str);
         }
@@ -70,17 +69,17 @@ fn main() {
             let compare_str: &str = &compare_line;
             if compare_str.contains(input_str ) {
                 if compare_str.contains(find) {
-                    match split_b {
+                    match split {
                         None => {
                             println!("{}", compare_str);
-                        },
-                        Some(split_b_str) => {
-                            if split_b_str.contains("whitespace") {
-                                let split_b_vec: Vec<&str> = compare_str.split_whitespace().collect();
-                                println!("{}",  split_b_vec[0]);
+                        }
+                        Some(split_str) => {
+                            if split_str.contains("whitespace") {
+                                let split_vec: Vec<&str> = compare_str.split_whitespace().collect();
+                                println!("{}",  split_vec[0]);
                             } else {
-                                let split_b_vec: Vec<&str> = compare_str.split(split_b_str).collect();
-                                println!("{}",  split_b_vec[0]);
+                                let split_vec: Vec<&str> = compare_str.split(split_str).collect();
+                                println!("{}",  split_vec[0]);
                             }
                         }
                     }
