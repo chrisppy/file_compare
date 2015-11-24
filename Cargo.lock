@@ -1,5 +1,5 @@
 [root]
-name = "file_cmp"
+name = "file_compare"
 version = "0.1.0"
 dependencies = [
  "clap 1.4.7 (registry+https://github.com/rust-lang/crates.io-index)",

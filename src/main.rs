@@ -22,7 +22,7 @@ fn read_to_vec(path_str: &str) -> Vec<String> {
 }
 
 fn main() {
-    let matches = App::new("file_cmp")
+    let matches = App::new("file_compare")
     .version("0.1.0")
     .author("Chris Palmer <pennstate5013@gmail.com>")
     .about("compare two files to see if lines in first file exist in the second file")

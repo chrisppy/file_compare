@@ -1,5 +1,5 @@
 [package]
-name = "file_cmp"
+name = "file_compare"
 version = "0.1.0"
 authors = ["Chris Palmer <pennstate5013@gmail.com>"]
 license = "GPL-3.0"
