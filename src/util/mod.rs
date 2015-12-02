@@ -28,7 +28,7 @@ pub fn get_name() -> &'static str {
 }
 
 pub fn get_author() -> &'static str {
-    "Chris Palmer <pennstate5013@gmail.com>"
+    "red-oxide <https://github.com/red-oxide/file_compare>"
 }
 
 pub fn get_about() -> &'static str {
